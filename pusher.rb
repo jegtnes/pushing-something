@@ -11,9 +11,9 @@ get '/' do
   erb :index, :layout => :layout
 end
 
-post '/message' do
+post '/' do
   Pusher.trigger('test_channel', 'message', {message: params['message']})
-  erb :index, :layout => :layout
+  params['message']
 end
 
 get '/spotify-search' do
