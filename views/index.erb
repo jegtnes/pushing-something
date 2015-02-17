@@ -1,5 +1,5 @@
 <h1>Sup.</h1>
-<form action="/" method="post">
+<form id="message" action="/message" method="post">
   <input type="text" name="message" value="">
   <button type="submit">Send, yo.</button>
 </form>
@@ -9,5 +9,18 @@ var pusher = new Pusher('3c5b5ffb49fe35b8d7bd');
 var channel = pusher.subscribe('test_channel');
 channel.bind('message', function(data) {
   $('.messages').append('<li>' + data.message + '</li>');
+});
+
+$('#message').on('submit', function(e) {
+  e.preventDefault();
+  message = console.log($(this).find('input').val());
+  $.ajax({
+    type: "POST",
+    url: '/message',
+    data: $(this).serialize(),
+    success: function() {
+      console.log(this);
+    }
+  });
 });
 </script>

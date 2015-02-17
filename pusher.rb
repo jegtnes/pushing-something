@@ -10,7 +10,7 @@ get '/' do
   erb :index, :layout => :layout
 end
 
-post '/' do
+post '/message' do
   Pusher.trigger('test_channel', 'message', {message: params['message']})
-  params['message']
+  erb :index, :layout => :layout
 end
