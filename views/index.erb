@@ -1,10 +1,8 @@
 <h1>Sup.</h1>
 <form id="message" action="/message" method="post">
-  <label for="artist">Artist:</label>
-  <input type="text" name="artist" value="">
-  <label for="song">Song:</label>
-  <input type="text" name="song" value="">
-  <button type="submit">Send, yo.</button>
+  <input type="text" name="artist" value="" placeholder="Artist:" class="form-control">
+  <input type="text" name="song" value="" placeholder="Song:" class="form-control">
+  <button type="submit" class="btn-primary btn">Send, yo.</button>
 </form>
 <div id="results">
   <ul class="results_list">
@@ -24,7 +22,7 @@
        -
        <span class="artist_name">The Decemberists</span>
      </p>
-     <button class="down">-</button>
+     <button class="down round">-</button>
      <span class="vote_number">6</span>
      <button class="up">+</button>
   </li>
