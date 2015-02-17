@@ -1,9 +1,9 @@
 <h1>Sup.</h1>
+<ul class="messages"></ul>
 <script type="text/javascript">
-
 var pusher = new Pusher('3c5b5ffb49fe35b8d7bd');
 var channel = pusher.subscribe('test_channel');
 channel.bind('my_event', function(data) {
-  alert(data.message);
+  $('.messages').append('<li>' + data.message + '</li>');
 });
 </script>
