@@ -1,9 +1,73 @@
 <h1>Sup.</h1>
 <form id="message" action="/message" method="post">
-  <input type="text" name="message" value="">
+  <label for="artist">Artist:</label>
+  <input type="text" name="artist" value="">
+  <label for="song">Song:</label>
+  <input type="text" name="song" value="">
   <button type="submit">Send, yo.</button>
 </form>
-<ul class="messages"></ul>
+<div id="results">
+  <ul class="results_list">
+    <li><img src="http://placekitten.com/g/300/300" width="100" height="100"> Easy Come, Easy Go - The Decemberists</li>
+    <li><img src="http://placekitten.com/g/500/500" width="100" height="100"> Lemonade Lake - Jungle</li>
+    <li><img src="http://placekitten.com/g/700/700" width="100" height="100"> Girls and Boys - Blur</li>
+    <li><img src="http://placekitten.com/g/900/900" width="100" height="100"> Girlfriend in a Coma- The Smiths</li>
+    <li><img src="http://placekitten.com/g/1000/1000" width="100" height="100"> I Spy - Pulp</li>
+  </ul>
+</div>
+
+<ul class="votes">
+  <li>
+    <img src="http://placekitten.com/g/300/300" width="100" height="100">
+    <p class="song_info">
+      <span class="artist_song">Easy Come, Easy Go</span>
+       -
+       <span class="artist_name">The Decemberists</span>
+     </p>
+     <button class="down">-</button>
+     <span class="vote_number">6</span>
+     <button class="up">+</button>
+  </li>
+  <li>
+    <img src="http://placekitten.com/g/500/500" width="100" height="100">
+    <p class="song_info">
+      <span class="artist_song"> Lemonade Lake</span>
+       -
+       <span class="artist_name">Jungle</span>
+    </p>
+    <button class="down">-</button>
+    <span class="vote_number">2</span>
+    <button class="up">+</button>
+  </li>
+  <li>
+    <img src="http://placekitten.com/g/700/700" width="100" height="100">
+    <p class="song_info">
+      <span class="artist_song"> Girls and Boys</span> -
+      <span class="artist_name">Blur</span>
+    </p>
+    <button class="down">-</button>
+    <span class="vote_number">9</span>
+    <button class="up">+</button>
+  </li>
+  <li><img src="http://placekitten.com/g/900/900" width="100" height="100">
+    <p class="song_info">
+      <span class="artist_song"> Girlfriend in a Coma</span> -
+      <span class="artist_name"> The Smiths</span>
+    </p>
+    <button class="down">-</button>
+    <span class="vote_number">4</span>
+    <button class="up">+</button>
+  </li>
+  <li><img src="http://placekitten.com/g/1000/1000" width="100" height="100">
+    <p class="song_info">
+      <span class="artist_song">I Spy</span> -
+      <span class="artist_name">Pulp</span>
+    </p>
+    <button class="down">-</button>
+    <span class="vote_number">0</span>
+    <button class="up">+</button>
+  </li>
+</ul>
 <script type="text/javascript">
 var pusher = new Pusher('3c5b5ffb49fe35b8d7bd');
 var channel = pusher.subscribe('test_channel');

@@ -1,0 +1,21 @@
+#results {
+  width: 450px;
+  max-height: 400px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+.results_list img {
+  vertical-align: middle;
+}
+
+ul li {
+  list-style: none;
+}
+
+.votes li {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  vertical-align: top;
+}
