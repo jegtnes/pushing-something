@@ -29,6 +29,10 @@ form#songSearch {
   color: #FFF;
 }
 
+.results_list {
+  padding: 0 5px;
+}
+
 .results_list img {
   vertical-align: middle;
 }
@@ -84,6 +88,7 @@ ul li {
   height: 30px;
   width: 30px;
   padding-bottom: 5px;
+  margin: 0 5px 0 5px;
   font-size: 20px;
   background: transparent;
   border: 1px solid #84bd00;
