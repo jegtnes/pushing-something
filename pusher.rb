@@ -11,5 +11,6 @@ get '/' do
 end
 
 post '/' do
-
+  Pusher.trigger('test_channel', 'message', {message: params['message']})
+  params['message']
 end
