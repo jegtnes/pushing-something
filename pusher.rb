@@ -1,5 +1,7 @@
 require 'sinatra'
 
+
+
 get '/' do
-  'Hello world!'
+  erb :index, :layout => :layout
 end
