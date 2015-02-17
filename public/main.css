@@ -38,6 +38,12 @@ form#songSearch {
   border-bottom: 1px solid grey;
 }
 
+.results_list li:hover,
+.results_list li:focus {
+  cursor: pointer;
+  color: #84bd00;
+}
+
 ul li {
   list-style: none;
 }
@@ -75,17 +81,19 @@ ul li {
 
 .round {
   border-radius: 100%;
-  color: #bdc3c7;
-  border: 1px solid #bdc3c7;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
+  padding-bottom: 5px;
+  font-size: 20px;
   background: transparent;
+  border: 1px solid #84bd00;
+  color: #84bd00;
 }
 
 .round:hover,
 .round:focus {
-  border-color: #84bd00;
-  color: #84bd00;
+  border-color: #425e00;
+  color: #425e00;
 }
 
 .btn {
@@ -105,4 +113,8 @@ ul li {
 .btn-primary:focus,
 .btn-primary:active {
   background: #425e00;
+}
+
+.vote_number {
+  font-size: 24px;
 }
