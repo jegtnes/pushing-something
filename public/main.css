@@ -15,7 +15,7 @@ button {
   cursor: pointer;
 }
 
-form#message {
+form#songSearch {
   margin-bottom: 10px;
   text-align: center;
 }
