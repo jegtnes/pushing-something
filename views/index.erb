@@ -1,7 +1,7 @@
 <h1>Sup.</h1>
-<form id="message" action="/message" method="post">
+<form id="songsearch" action="/spotify-search" method="post">
   <input type="text" name="artist" value="" placeholder="Artist:" class="form-control">
-  <input type="text" name="song" value="" placeholder="Song:" class="form-control">
+  <input type="text" name="track" value="" placeholder="Song:" class="form-control">
   <button type="submit" class="btn-primary btn">Send, yo.</button>
 </form>
 <div id="results">
@@ -73,15 +73,15 @@ channel.bind('message', function(data) {
   $('.messages').append('<li>' + data.message + '</li>');
 });
 
-$('#message').on('submit', function(e) {
+$('#songsearch').on('submit', function(e) {
   e.preventDefault();
-  $.ajax({
-    type: "POST",
-    url: '/message',
-    data: $(this).serialize(),
-    success: function() {
-      console.log(this);
-    }
+  artist = $(this).find("input[name=artist]").val();
+  track = $(this).find("input[name=track]").val();
+  url = "/spotify-search?artist=" + artist + "&track=" + track + "&type=track";
+
+  console.log(url);
+  $.get( url, function( data ) {
+    console.log(data);
   });
 });
 </script>
