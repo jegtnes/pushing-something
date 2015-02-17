@@ -13,7 +13,6 @@ channel.bind('message', function(data) {
 
 $('#message').on('submit', function(e) {
   e.preventDefault();
-  message = console.log($(this).find('input').val());
   $.ajax({
     type: "POST",
     url: '/message',
